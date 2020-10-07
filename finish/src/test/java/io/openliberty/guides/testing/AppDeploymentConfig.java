@@ -29,6 +29,7 @@ public class AppDeploymentConfig implements SharedContainerConfiguration {
     @Container
     public static ApplicationContainer app = new ApplicationContainer()
                     .withAppContextRoot("/guide-microshed-testing")
+                    //.withHttpPort(Integer.parseInt(System.getProperty("microshed_http_port")))
                     .withReadinessPath("/health/ready");
 
 }
